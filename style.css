@@ -173,13 +173,13 @@ body {
 }
 
 .btn-save {
-    background: #2c3e50;
+    background: #7e0606;
     color: white;
 }
 
 .btn-share {
-    background: #f5e6d3;
-    color: #2c3e50;
+    background: #ca2525;
+    color: #ffffff;
 }
 
 @media (max-width: 480px) {
