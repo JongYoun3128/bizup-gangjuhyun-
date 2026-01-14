@@ -34,7 +34,7 @@ function shareCard() {
 
 // 모달 닫기
 function closeShareModal() {
-    document.getElementById("shareModal").style.display = "none";
+    document.getElementById("shareModal").style.display = "block";
 }
 
 // 모달 외부 클릭시 닫기
