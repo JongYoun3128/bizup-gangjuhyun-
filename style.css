@@ -174,13 +174,8 @@ body {
 }
 
 .btn-save {
-    background: #7e0606;
+    background: #0f3f05;
     color: white;
-}
-
-.btn-share {
-    background: #570e0e;
-    color: #ffffff;
 }
 
 @media (max-width: 480px) {
@@ -202,7 +197,9 @@ body {
     max-width: 450px;
     overflow: hidden;
 }
-
+.content img {
+    width: 100%;
+}
 .share-modal-header {
     display: flex;
     justify-content: space-between;
@@ -210,9 +207,7 @@ body {
     padding: 20px;
     border-bottom: 1px solid #e0e0e0;
 }
-.content img {
-    width: 100%;
-}
+
 .share-modal-header h3 {
     margin: 0;
     font-size: 18px;
@@ -331,6 +326,18 @@ body {
     margin-top: 20px;
     font-size: 0.9rem;
 }
+.content-text {
+    text-align: center;
+}
+.content-text a {
+    padding: 10px;
+    background-color: #238110;
+    color: white;
+    display: block;
+    width: fit-content;
+    margin: 10px auto;
+    border-radius: 5px;
+}
 @media (max-width: 480px) {
     .share-options {
         grid-template-columns: repeat(4, 1fr);
@@ -342,5 +349,64 @@ body {
 @media (max-width: 680px) {
     .share-options {
         grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 언어 선택 영역 */
+.language-selector {
+    position: fixed;
+    bottom: 10px;
+    z-index: 99999999;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.089);
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lang-btn {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+    border-color: #0f3f05;
+}
+
+.lang-btn.active {
+    border-color: #0f3f05;
+    background: rgba(15, 63, 5, 0.1);
+}
+
+.lang-btn .fi {
+    width: 45px;
+    height: 45px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+    .language-selector {
+        gap: 8px;
+        padding: 15px;
+    }
+
+    .lang-btn .fi {
+        width: 25px;
+        height: 25px;
     }
 }
